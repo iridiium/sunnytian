@@ -16,6 +16,9 @@ module.exports = {
 			'deez nut',
 			'uwu',
 			'xue hua piao piao',
+			'how abt u do some bitches',
+			'hahahai!',
+			'is that a skill issue',
 		];
 
 		const reply = phrases[Math.floor(Math.random() * phrases.length)];
