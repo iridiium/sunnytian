@@ -14,12 +14,12 @@ module.exports = {
 		axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${API_KEY}`)
 
 			.then(function(response) {
-
+				console.log(response);
 				const date = new Date(response.data.dt * 1000).toGMTString();
 
 				const weatherEmbed = new Discord.MessageEmbed()
 					.setColor('#748e54')
-					.setTitle('Tian气预报:')
+					.setTitle(`${response.data.weather[0].main} Tian!`)
 					.setDescription(`In ${response.data.name} at ${date}`)
 					.addFields(
 						{ name: 'Temperature (°C)', value: Math.round((response.data.main.temp - 273.15) * 10) / 10, inline: true },

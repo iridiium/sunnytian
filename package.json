@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/rest": "^0.3.0",
-    "@discordjs/voice": "^0.7.5",
+    "@discordjs/voice": "github:discordjs/voice",
     "axios": "^0.27.2",
     "discord-api-types": "^0.26.1",
     "discord.js": "^12.5.3",
