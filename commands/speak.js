@@ -19,6 +19,7 @@ module.exports = {
 			'how abt u do some bitches',
 			'hahahai!',
 			'is that a skill issue',
+			'kys',
 		];
 
 		const reply = phrases[Math.floor(Math.random() * phrases.length)];

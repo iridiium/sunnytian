@@ -41,12 +41,13 @@ bot.on('message', async message => {
 	const args = message.content.slice(PREFIX.length).trim().split(/ +/);
 	const commandName = args.shift().toLowerCase();
 
-	const command = bot.commands.get(commandName);
+	const command = bot.commands.get(commandName)
+	|| bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
 	if (!command) return;
 
 	try {
-		bot.commands.get(commandName).execute(message, args);
+		bot.commands.get(commandName).execute(message, args, commandName);
 	}
 	catch (error) {
 		console.error(error);
