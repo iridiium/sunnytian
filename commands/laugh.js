@@ -2,15 +2,17 @@
 const ytdl = require('ytdl-core');
 
 const Discord = require('discord.js');
-const voice = require('@discordjs/voice');
 
 const queue = new Map();
+
+const talkedRecently = new Set();
 
 // Module body
 module.exports = {
 	name: 'laugh',
+
 	// All of the different commands that have code in this file
-	aliases: ['skip', 'stop', 'queue', 'die', 'leave', 'join', 'remove'],
+	aliases: ['skip', 'stop', 'die', 'leave', 'join'],
 
 	async execute(message, args, cmd) {
 		// If the message is not being sent in a server i.e. direct messaged:
@@ -42,14 +44,29 @@ module.exports = {
 		// From the map queue, gets the list of songs from the key of the id of the guild
 		const server_queue = queue.get(message.guild.id);
 
-		if (cmd == 'play') {
+		// conditional statement for each command
+		if (cmd == 'laugh') {
+			if (talkedRecently.has(message.author.id)) {
+				return message.channel.send(error_embed('Wait 5 seconds before typing this command again!'));
+			}
+			else {
+				// Adds the user to the set so that they can't talk
+				talkedRecently.add(message.author.id);
+				setTimeout(() => {
+					// Removes the user from the set after a minute
+					talkedRecently.delete(message.author.id);
+				}, 5000);
+			}
+
 			// Defines new dictionary song that will store all the information for the
 			let song = {};
 
 			// song_info stores the information that ytdl has gotten from YouTube
 			const song_info = await ytdl.getInfo('https://youtu.be/N147Nh-kWSo');
 
-			song = { url: song_info.videoDetails.video_url };
+			song = {
+				url: song_info.videoDetails.video_url,
+			};
 
 			// If there is no server_queue, or an empty server_queue:
 			if (!server_queue || server_queue.songs.length == 0) {
@@ -74,7 +91,7 @@ module.exports = {
 					// Get the connection info
 					queue_constructor.connection = connection;
 					// Plays a song in a server
-					video_player(message, message.guild, queue_constructor.songs[0]);
+					video_player(message.guild, queue_constructor.songs[0]);
 				}
 				catch (err) {
 					queue.delete(message.guild.id);
@@ -87,8 +104,7 @@ module.exports = {
 				// If the queue isn't empty, add this song to the server queue to be played next.
 				server_queue.songs.push(song);
 				return message.channel.send(success_embed(
-					'Why would you do this to yourself? :weary:',
-					'6 more seconds of Sunny\'s laugh?',
+					`"${song.title}" added to queue!`, 'Song added to queue!',
 				));
 			}
 		}
@@ -106,7 +122,7 @@ module.exports = {
 
 // Helper functions
 
-const video_player = async (message, guild, song) => {
+const video_player = async (guild, song) => {
 	const song_queue = queue.get(guild.id);
 
 	if (!song) {
@@ -115,18 +131,11 @@ const video_player = async (message, guild, song) => {
 		return;
 	}
 
-	try {
-		const stream = ytdl(song.url, { filter: 'audioonly' });
-		song_queue.connection.play(stream, { seek: 0, volume: 0.5 }).on('finish', () => {
-			song_queue.songs.shift();
-			video_player(guild, song_queue.songs[0]);
-		});
-	}
-	catch (exc) {
-		return message.channel.send(error_embed(
-			'The bot had trouble connecting, try again later.',
-		));
-	}
+	const stream = ytdl(song.url, { filter: 'audioonly' });
+	song_queue.connection.play(stream, { seek: 0, volume: 0.5 }).on('finish', () => {
+		song_queue.songs.shift();
+		video_player(guild, song_queue.songs[0]);
+	});
 
 	song_queue.text_channel.send(song_play_embed(song));
 };
@@ -191,7 +200,6 @@ const stop_song = (message, server_queue) => {
 
 	try {
 		message.guild.me.voice.channel.leave();
-		voice.getVoiceConnection(message.guild.id).disconnect();
 	}
 	catch (exc) {
 		console.log(exc);
@@ -213,6 +221,7 @@ const join = async (message) => {
 		'Voice channel joined!', 'Joined!',
 	));
 };
+
 
 // Embed functions
 
