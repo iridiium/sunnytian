@@ -11,15 +11,15 @@ module.exports = {
 			'who asked lol',
 			'deez nuts',
 			'heheheha',
-			'didnt ask',
-			'dont care',
 			'deez nut',
-			'uwu',
 			'xue hua piao piao',
-			'how abt u do some bitches',
-			'hahahai!',
 			'is that a skill issue',
 			'kys',
+			'*among us theme but it\'s dings*',
+			'IT MORBIN TIME',
+			'cba',
+			'can you find who asked?',
+			'how abt u get some bitches',
 		];
 
 		const reply = phrases[Math.floor(Math.random() * phrases.length)];
