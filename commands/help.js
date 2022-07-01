@@ -10,6 +10,7 @@ module.exports = {
 			.addFields(
 				{ name: 'dog!weather', value: 'Get Sunny\'s current evolution.' },
 				{ name: 'dog!speak', value: 'Speak to an AI trained with years of Sunny\'s voice samples to get the world\'s most accurate representation of Sunny\'s voice.' },
+				{ name: 'dog!laugh', value: 'Play Sunny\'s laugh (bass boosted) for 6 seconds.' },
 			)
 			.setTimestamp()
 			.setFooter('Made by mcmakkers#9633');

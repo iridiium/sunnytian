@@ -104,7 +104,7 @@ module.exports = {
 				// If the queue isn't empty, add this song to the server queue to be played next.
 				server_queue.songs.push(song);
 				return message.channel.send(success_embed(
-					`"${song.title}" added to queue!`, 'Song added to queue!',
+					'Why would you do this to yourself? :weary:', 'More of Sunny\'s laugh?',
 				));
 			}
 		}

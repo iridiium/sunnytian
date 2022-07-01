@@ -9,7 +9,6 @@ module.exports = {
 			'no bitches?',
 			'go get some bitches',
 			'who asked lol',
-			'deez nuts',
 			'heheheha',
 			'deez nut',
 			'xue hua piao piao',
@@ -17,9 +16,9 @@ module.exports = {
 			'kys',
 			'*among us theme but it\'s dings*',
 			'IT MORBIN TIME',
-			'cba',
-			'can you find who asked?',
+			'but can you find who asked?',
 			'how abt u get some bitches',
+			'super idol de xiao rong dou mei ni de tian',
 		];
 
 		const reply = phrases[Math.floor(Math.random() * phrases.length)];
