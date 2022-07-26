@@ -1,0 +1,158 @@
+{
+    "china_history" : [
+        {
+            "type": "short_answer",
+            "prompt": "What is the book of Confucius' sayings, compiled by his followers, called??",
+            "correct_answer": "The Analects"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "What was the earliest recorded ruling dynasty of China?",
+            "correct_answer": "Shang"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "What was the earliest official ruling dynasty of China?",
+            "correct_answer": "Qin"
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "Which of these did not happen under the Qin dynasty?",
+            "options": [
+                "The Terracotta Army was made.",
+                "Work began on the Great Wall.",
+                "A single national script was created.",
+                "The first Asian superhighway was created.",
+                "The Silk Road was established."
+            ],
+            "correct_answer": "The Silk Road was established."
+        },
+        {
+            "type": "short_answer",
+            "prompt": "Whose maps led to the making of the Silk Road?",
+            "correct_answer": "Zhang Qian"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "When was the Silk Road created?",
+            "correct_answer": "125BC"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "Who developed paper?",
+            "correct_answer": "Cai Lun"
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "Which of these did Xu Shen write?",
+            "options": [
+                "The first Chinese dictionary.",
+                "The first book of Chinese history.",
+                "The first book of Chinese philosophy.",
+                "The first collection of Chinese poems.",
+                "The first textbook in China."
+            ],
+            "correct_answer": "The first Chinese dictionary."
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "Which of these did Sima Qian write?",
+            "options": [
+                "The first Chinese dictionary.",
+                "The first book of Chinese history.",
+                "The first book of Chinese philosophy.",
+                "The first collection of Chinese poems.",
+                "The first textbook in China."
+            ],
+            "correct_answer": "The first book of Chinese history."
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "Which of these was NOT used by Chinese alchemists to make gunpowder?",
+            "options": [
+                "Charcoal",
+                "Niter",
+                "Phosphorus",
+                "Saltpetre",
+                "Sulphur"
+            ],
+            "correct_answer": "Phosphorus"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "Under which dynasty was gunpowder first used in warfare?",
+            "correct_answer": "Tang"
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "What is the name of the earliest known printed book?",
+            "options": [
+                "The Bronze Sutra",
+                "The Silver Sutra",
+                "The Gold Sutra",
+                "The Diamond Sutra",
+                "The Jade Sutra"
+            ],
+            "correct_answer": "The Diamond Sutra"
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "Which of these modern-day cities were NEVER in Kublai Khan's empire?",
+            "options": [
+                "Baghdad",
+                "Delhi",
+                "Kabul",
+                "Kyiv",
+                "Samarkand"
+            ],
+            "correct_answer": "Delhi"
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "Which of these events did not happen during Kublai Khan's reign?",
+            "options": [
+                "The first Muslims came.",
+                "Paper money was introduced.",
+                "Japan was conquered.",
+                "A class system was introduced.",
+                "Europeans were appointed as diplomats."
+            ],
+            "correct_answer": "Japan was conquered."
+        },
+        {
+            "type": "short_answer",
+            "prompt": "Under which dynasty could Chinese merchants first trade to other countries?",
+            "correct_answer": "Ming"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "Which Chinese general, known internationally as Koxinga, seized Taiwan in the Ming Dynasty?",
+            "correct_answer": "Zheng Chenggong"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "Under which dynasty was Taiwan annexed?",
+            "correct_answer": "Qing"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "What drug caused a war between the British and the Chinese?",
+            "correct_answer": "Opium"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "Which is the densest city in China?",
+            "correct_answer": "Macao"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "What city was handed over to the British after the First Opium War?",
+            "correct_answer": "Hong Kong"
+        },
+        {
+            "type": "short_answer",
+            "prompt": "Who, claiming he was the son of God, revolted against the Qing Dynasty?",
+            "correct_answer": "Hong Xiuquan"
+        }
+    ]
+}
