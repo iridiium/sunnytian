@@ -141,7 +141,7 @@
         },
         {
             "type": "short_answer",
-            "prompt": "Which is the densest city in China?",
+            "prompt": "What is the densest city in China?",
             "correct_answer": "Macao"
         },
         {
@@ -153,6 +153,18 @@
             "type": "short_answer",
             "prompt": "Who, claiming he was the son of God, revolted against the Qing Dynasty?",
             "correct_answer": "Hong Xiuquan"
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "For how long was the city of Nanjing under the control of the Taiping Rebellion?",
+            "options": [
+                "12 hours",
+                "12 days",
+                "12 weeks",
+                "12 months",
+                "12 years"
+            ],
+            "correct_answer": "12 years"
         }
     ]
 }
