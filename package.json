@@ -81,7 +81,7 @@
     "d": "^1.0.1",
     "dasu": "^0.4.3",
     "debug": "^4.3.4",
-    "decode-uri-component": "^0.2.0",
+    "decode-uri-component": "^0.2.1",
     "deep-extend": "^0.6.0",
     "deep-is": "^0.1.4",
     "define-properties": "^1.1.4",
