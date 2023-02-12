@@ -155,7 +155,7 @@
     "glob-parent": "^6.0.2",
     "global-dirs": "^0.1.1",
     "globals": "^13.15.0",
-    "got": "^12.1.0",
+    "got": "^12.5.3",
     "graceful-fs": "^4.2.10",
     "has": "^1.0.3",
     "has-bigints": "^1.0.2",
